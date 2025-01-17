@@ -9,7 +9,7 @@ export interface GroupIndexesAndCount {
 }
 
 export function groupCountsToIndicesAndCount(counts: number[]) {
-  return counts.reduce(
+  return counts?.reduce(
     (acc, groupCount) => {
       acc.groupIndices.push(acc.totalCount)
       acc.totalCount += groupCount + 1
